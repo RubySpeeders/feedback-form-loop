@@ -2,15 +2,80 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Support extends Component {
+  state = {
+    support: '',
+  };
+
+  onRadioChange = (event) => {
+    this.setState(
+      {
+        support: event.target.value,
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
+  };
+
   onNextClick = (event) => {
     event.preventDefault();
     this.props.history.push('/comments');
   };
+
   render() {
     return (
       <div>
         <p>How well are you being supported?</p>
         <form onSubmit={this.onNextClick}>
+          <input
+            type="radio"
+            id="one"
+            name="support"
+            value="1"
+            checked={this.state.support === '1'}
+            onChange={this.onRadioChange}
+          ></input>
+          <label for="one">1</label>
+
+          <input
+            type="radio"
+            id="two"
+            name="support"
+            value="2"
+            checked={this.state.support === '2'}
+            onChange={this.onRadioChange}
+          ></input>
+          <label for="two">2</label>
+
+          <input
+            type="radio"
+            id="three"
+            name="support"
+            value="3"
+            checked={this.state.support === '3'}
+            onChange={this.onRadioChange}
+          ></input>
+          <label for="three">3</label>
+
+          <input
+            type="radio"
+            id="four"
+            name="support"
+            value="4"
+            checked={this.state.support === '4'}
+            onChange={this.onRadioChange}
+          ></input>
+          <label for="four">4</label>
+
+          <input
+            type="radio"
+            id="five"
+            name="support"
+            value="5"
+            checked={this.state.support === '5'}
+            onChange={this.onRadioChange}
+          ></input>
+          <label for="five">5</label>
           <button>Next</button>
         </form>
       </div>
