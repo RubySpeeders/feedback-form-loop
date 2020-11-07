@@ -23,11 +23,12 @@ class Comments extends Component {
         <p>Any comments you want to leave?</p>
         <form onSubmit={this.onNextClick}>
           <input
-            required
             placeholder="Write your comments here"
             onChange={this.handleChange}
           ></input>
-          <button>Next</button>
+          <div>
+            <button>Next</button>
+          </div>
         </form>
       </div>
     );

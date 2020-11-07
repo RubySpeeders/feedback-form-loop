@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 
 class Review extends Component {
   onSubmitClick = (event) => {
     event.preventDefault();
-    this.props.history.push('/finish');
-    //this.saveData();
+    this.saveData(this.props.store.feedbackReducer);
   };
 
-  //saveData
+  saveData(newFeedback) {
+    axios
+      .post('/feedback', newFeedback)
+      .then((response) => {
+        this.props.history.push('/submission');
+      })
+      .catch((err) => {
+        console.log(err);
+        alert('Your feedback did not go through.');
+      });
+  }
 
   // onBackClick = (event) => {
   //   console.log('back clicked');
@@ -19,10 +29,15 @@ class Review extends Component {
     return (
       <div>
         <div>
-          <p>Feeling: {this.props.store.feedbackReducer.feeling}</p>
-          <p>Understanding: {this.props.store.feedbackReducer.understanding}</p>
-          <p>Support: {this.props.store.feedbackReducer.support}</p>
-          <p>Comments: {this.props.store.feedbackReducer.comments}</p>
+          <p>Please review your answers:</p>
+          <div className="feedback">
+            <p>Feeling: {this.props.store.feedbackReducer.feeling}</p>
+            <p>
+              Understanding: {this.props.store.feedbackReducer.understanding}
+            </p>
+            <p>Support: {this.props.store.feedbackReducer.support}</p>
+            <p>Comments: {this.props.store.feedbackReducer.comments}</p>
+          </div>
         </div>
         <form onSubmit={this.onSubmitClick}>
           {/* <button onClick={this.onBackClick}>Back</button> */}

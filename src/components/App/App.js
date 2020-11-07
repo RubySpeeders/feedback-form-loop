@@ -11,6 +11,7 @@ import Understanding from '../../Pages/Understanding/Understanding';
 import Support from '../../Pages/Support/Support';
 import Comments from '../../Pages/Comments/Comments';
 import Review from '../../Pages/Review/Review';
+import Submission from '../../Pages/Submission/Submission';
 
 class App extends Component {
   startButton = (event) => {
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path="/support" component={Support} />
           <Route exact path="/comments" component={Comments} />
           <Route exact path="/review" component={Review} />
+          <Route exact path="/submission" component={Submission} />
         </Router>
       </div>
     );

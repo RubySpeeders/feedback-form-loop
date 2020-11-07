@@ -8,6 +8,9 @@ class Homepage extends Component {
   render() {
     return (
       <div>
+        <div>
+          <h1>Answer some questions about your day!</h1>
+        </div>
         <form onSubmit={this.onStart}>
           <button>Start</button>
         </form>

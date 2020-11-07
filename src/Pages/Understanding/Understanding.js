@@ -72,7 +72,9 @@ class Understanding extends Component {
             onChange={this.onRadioChange}
           ></input>
           <label for="five">5</label>
-          <button>Next</button>
+          <div>
+            <button>Next</button>
+          </div>
         </form>
       </div>
     );
