@@ -5,6 +5,7 @@ class Comments extends Component {
   state = {
     comments: '',
   };
+
   onNextClick = (event) => {
     event.preventDefault();
     this.props.dispatch({ type: 'UPDATE_COMMENTS', payload: this.state });

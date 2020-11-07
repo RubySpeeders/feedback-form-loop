@@ -25,6 +25,9 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
   } else if (action.type === 'UPDATE_COMMENTS') {
     return { ...state, ...action.payload };
   }
+  if (action.type === 'START_PAGE') {
+    return action.payload;
+  }
   return state;
 };
 

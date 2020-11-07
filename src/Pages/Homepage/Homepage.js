@@ -1,10 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Homepage extends Component {
+  state = {
+    feeling: '',
+    understanding: '',
+    support: '',
+    comments: '',
+  };
+
+  componentDidMount() {
+    this.resetPage();
+  }
+
   onStart = (event) => {
     event.preventDefault();
     this.props.history.push('/feeling');
   };
+
+  resetPage() {
+    this.props.dispatch({ type: 'START_PAGE', payload: this.state });
+  }
+
   render() {
     return (
       <div>
@@ -19,4 +36,4 @@ class Homepage extends Component {
   }
 }
 
-export default Homepage;
+export default connect()(Homepage);
