@@ -8,13 +8,29 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-const personReducer = (state = [], action) => {
+const feedbackReducerInitialState = {
+  feeling: '',
+  understanding: '',
+  support: '',
+  comments: '',
+};
+
+const feedbackReducer = (state = feedbackReducerInitialState, action) => {
+  if (action.type === 'UPDATE_FEELING') {
+    return { ...state, ...action.payload };
+  } else if (action.type === 'UPDATE_UNDERSTANDING') {
+    return { ...state, ...action.payload };
+  } else if (action.type === 'UPDATE_SUPPORT') {
+    return { ...state, ...action.payload };
+  } else if (action.type === 'UPDATE_COMMENTS') {
+    return { ...state, ...action.payload };
+  }
   return state;
 };
 
 const storeInstance = createStore(
   combineReducers({
-    personReducer,
+    feedbackReducer,
   }),
   applyMiddleware(logger)
 );

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Review extends Component {
   onSubmitClick = (event) => {
     event.preventDefault();
-    //this.props.history.push('/xxxx');
+    this.props.history.push('/finish');
   };
 
   // onBackClick = (event) => {

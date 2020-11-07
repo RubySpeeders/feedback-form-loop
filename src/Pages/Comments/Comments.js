@@ -7,18 +7,14 @@ class Comments extends Component {
   };
   onNextClick = (event) => {
     event.preventDefault();
+    this.props.dispatch({ type: 'UPDATE_COMMENTS', payload: this.state });
     this.props.history.push('/review');
   };
 
   handleChange = (event) => {
-    this.setState(
-      {
-        comments: event.target.value,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      comments: event.target.value,
+    });
   };
 
   render() {

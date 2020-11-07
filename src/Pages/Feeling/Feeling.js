@@ -7,20 +7,17 @@ class Feeling extends Component {
   };
 
   onRadioChange = (event) => {
-    this.setState(
-      {
-        feeling: event.target.value,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      feeling: event.target.value,
+    });
   };
 
   onNextClick = (event) => {
     event.preventDefault();
+    this.props.dispatch({ type: 'UPDATE_FEELING', payload: this.state });
     this.props.history.push('/understanding');
   };
+
   render() {
     return (
       <div>

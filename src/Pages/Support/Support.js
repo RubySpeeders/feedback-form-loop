@@ -7,18 +7,14 @@ class Support extends Component {
   };
 
   onRadioChange = (event) => {
-    this.setState(
-      {
-        support: event.target.value,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      support: event.target.value,
+    });
   };
 
   onNextClick = (event) => {
     event.preventDefault();
+    this.props.dispatch({ type: 'UPDATE_SUPPORT', payload: this.state });
     this.props.history.push('/comments');
   };
 

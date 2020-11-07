@@ -7,18 +7,14 @@ class Understanding extends Component {
   };
 
   onRadioChange = (event) => {
-    this.setState(
-      {
-        understanding: event.target.value,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      understanding: event.target.value,
+    });
   };
 
   onNextClick = (event) => {
     event.preventDefault();
+    this.props.dispatch({ type: 'UPDATE_UNDERSTANDING', payload: this.state });
     this.props.history.push('/support');
   };
   render() {
