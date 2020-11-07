@@ -20,10 +20,10 @@ class Review extends Component {
       });
   }
 
-  // onBackClick = (event) => {
-  //   console.log('back clicked');
-  //   this.props.history.push('/comments');
-  // };
+  onBackClick = (event) => {
+    console.log('back clicked');
+    this.props.history.push('/comments');
+  };
 
   render() {
     return (
@@ -39,8 +39,8 @@ class Review extends Component {
             <p>Comments: {this.props.store.feedbackReducer.comments}</p>
           </div>
         </div>
+        <button onClick={this.onBackClick}>Back</button>
         <form onSubmit={this.onSubmitClick}>
-          {/* <button onClick={this.onBackClick}>Back</button> */}
           <button>Submit</button>
         </form>
       </div>
