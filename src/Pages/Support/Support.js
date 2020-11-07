@@ -24,6 +24,7 @@ class Support extends Component {
         <p>How well are you being supported?</p>
         <form onSubmit={this.onNextClick}>
           <input
+            required
             type="radio"
             id="one"
             name="support"

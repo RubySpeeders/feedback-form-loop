@@ -5,7 +5,10 @@ class Review extends Component {
   onSubmitClick = (event) => {
     event.preventDefault();
     this.props.history.push('/finish');
+    //this.saveData();
   };
+
+  //saveData
 
   // onBackClick = (event) => {
   //   console.log('back clicked');
@@ -15,6 +18,12 @@ class Review extends Component {
   render() {
     return (
       <div>
+        <div>
+          <p>Feeling: {this.props.store.feedbackReducer.feeling}</p>
+          <p>Understanding: {this.props.store.feedbackReducer.understanding}</p>
+          <p>Support: {this.props.store.feedbackReducer.support}</p>
+          <p>Comments: {this.props.store.feedbackReducer.comments}</p>
+        </div>
         <form onSubmit={this.onSubmitClick}>
           {/* <button onClick={this.onBackClick}>Back</button> */}
           <button>Submit</button>
@@ -24,4 +33,6 @@ class Review extends Component {
   }
 }
 
-export default connect()(Review);
+const mapStoreToProps = (store) => ({ store });
+
+export default connect(mapStoreToProps)(Review);

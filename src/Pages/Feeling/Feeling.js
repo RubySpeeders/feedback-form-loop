@@ -24,6 +24,7 @@ class Feeling extends Component {
         <p>How are you feeling today?</p>
         <form onSubmit={this.onNextClick}>
           <input
+            required
             type="radio"
             id="one"
             name="feeling"

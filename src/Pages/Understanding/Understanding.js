@@ -23,6 +23,7 @@ class Understanding extends Component {
         <p>How well are you understanding the content?</p>
         <form onSubmit={this.onNextClick}>
           <input
+            required
             type="radio"
             id="one"
             name="understanding"
