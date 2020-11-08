@@ -33,7 +33,7 @@ class Homepage extends Component {
       <div>
         <Router>
           <nav>
-            <ul>
+            <ul className="navBar">
               <li>
                 <Link to="/admin">Admin</Link>
               </li>

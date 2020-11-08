@@ -16,3 +16,16 @@
 .App-intro {
   font-size: large;
 }
+
+.navBar {
+  text-align: left;
+}
+
+.simpleTable {
+  border-collapse: collapse;
+}
+
+.simpleTable td {
+  padding: 6px 10px;
+  border: 1px solid #333333;
+}

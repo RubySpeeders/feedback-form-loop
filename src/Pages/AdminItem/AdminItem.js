@@ -2,7 +2,7 @@ import React from 'react';
 
 function AdminItem(props) {
   return (
-    <table>
+    <table className="simpleTable">
       <thead>
         <tr>
           <th>Feeling</th>
