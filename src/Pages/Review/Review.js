@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 class Review extends Component {
   onSubmitClick = (event) => {
@@ -38,8 +39,8 @@ class Review extends Component {
             <p>Comments: {this.props.store.feedbackReducer.comments}</p>
           </div>
         </div>
-        <button onClick={this.onBackClick}>Back</button>
         <form onSubmit={this.onSubmitClick}>
+          <button onClick={this.onBackClick}>Back</button>
           <button>Submit</button>
         </form>
       </div>

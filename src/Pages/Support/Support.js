@@ -18,6 +18,10 @@ class Support extends Component {
     this.props.history.push('/comments');
   };
 
+  onBackClick = (event) => {
+    this.props.history.push('/understanding');
+  };
+
   render() {
     return (
       <div>
@@ -74,6 +78,7 @@ class Support extends Component {
           ></input>
           <label htmlFor="five">5</label>
           <div>
+            <button onClick={this.onBackClick}>Back</button>
             <button>Next</button>
           </div>
         </form>

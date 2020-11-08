@@ -17,6 +17,11 @@ class Understanding extends Component {
     this.props.dispatch({ type: 'UPDATE_UNDERSTANDING', payload: this.state });
     this.props.history.push('/support');
   };
+
+  onBackClick = (event) => {
+    this.props.history.push('/feeling');
+  };
+
   render() {
     return (
       <div>
@@ -73,6 +78,7 @@ class Understanding extends Component {
           ></input>
           <label htmlFor="five">5</label>
           <div>
+            <button onClick={this.onBackClick}>Back</button>
             <button>Next</button>
           </div>
         </form>
