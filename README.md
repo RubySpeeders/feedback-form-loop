@@ -6,6 +6,19 @@ Feedback Form
 
 I built a feedback form on a single page application using a hash router. There are four pages of questions - feeling, understanding, support, and comments. Before submitting, users can review the information they put in and go back and change their answers. The first three pages require an input, but the comments are optional. After submitting, the answers are saved in a database.
 
+## Prerequisites
+
+Node.js
+React
+Redux
+Postgresql
+Express
+Axios
+pg
+React-Redux
+Sweetalert
+Material-UI
+
 ## Installation
 
 1. Create a database named `prime_feedback`.
@@ -20,13 +33,6 @@ I built a feedback form on a single page application using a hash router. There 
 1.
 
 ## Built With
-
-React.js
-Redux
-Postgresql
-Express
-Sweetalert
-Material-UI
 
 ## Acknowledgement
 
