@@ -27,7 +27,31 @@ class Admin extends Component {
     // const listElements = this.props.store.feedbackReducer.map((item, index) => {
     //   return <li key={index}>{item}</li>;
     // });
-    return <div>{JSON.stringify(this.props.store.feedbackReducer)}</div>;
+    return (
+      <div>
+        <h1>Feedback Results</h1>
+        <div>{JSON.stringify(this.props.store.feedbackReducer)}</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Feeling</th>
+              <th>Understanding</th>
+              <th>Support</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        {/* <p>{listElements}</p> */}
+      </div>
+    );
   }
 }
 
