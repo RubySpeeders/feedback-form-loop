@@ -40,7 +40,9 @@ class Review extends Component {
           </div>
         </div>
         <form onSubmit={this.onSubmitClick}>
-          <button onClick={this.onBackClick}>Back</button>
+          <button type="button" onClick={this.onBackClick}>
+            Back
+          </button>
           <button>Submit</button>
         </form>
       </div>

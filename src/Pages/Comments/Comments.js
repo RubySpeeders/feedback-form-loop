@@ -26,13 +26,17 @@ class Comments extends Component {
     return (
       <div>
         <p>Any comments you want to leave?</p>
+        <p>(optional)</p>
         <form onSubmit={this.onNextClick}>
           <input
+            type="text"
             placeholder="Write your comments here"
             onChange={this.handleChange}
           ></input>
           <div>
-            <button onClick={this.onBackClick}>Back</button>
+            <button type="button" onClick={this.onBackClick}>
+              Back
+            </button>
             <button>Next</button>
           </div>
         </form>

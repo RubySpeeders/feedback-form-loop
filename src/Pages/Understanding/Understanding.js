@@ -78,7 +78,9 @@ class Understanding extends Component {
           ></input>
           <label htmlFor="five">5</label>
           <div>
-            <button onClick={this.onBackClick}>Back</button>
+            <button type="button" onClick={this.onBackClick}>
+              Back
+            </button>
             <button>Next</button>
           </div>
         </form>
