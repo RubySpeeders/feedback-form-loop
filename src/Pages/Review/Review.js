@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import swal from 'sweetalert';
+import Button from '@material-ui/core/Button';
 
 class Review extends Component {
   onSubmitClick = (event) => {
@@ -40,10 +41,16 @@ class Review extends Component {
           </div>
         </div>
         <form onSubmit={this.onSubmitClick}>
-          <button type="button" onClick={this.onBackClick}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={this.onBackClick}
+          >
             Back
-          </button>
-          <button>Submit</button>
+          </Button>
+          <Button variant="contained" color="primary" type="submit">
+            Submit
+          </Button>
         </form>
       </div>
     );

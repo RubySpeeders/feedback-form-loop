@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 class Submission extends Component {
   backToStart = (event) => {
@@ -9,7 +10,9 @@ class Submission extends Component {
     return (
       <div>
         <p>Successfully submitted!</p>
-        <button onClick={this.backToStart}>Back to Start</button>
+        <Button variant="contained" color="primary" onClick={this.backToStart}>
+          Back to Start
+        </Button>
       </div>
     );
   }

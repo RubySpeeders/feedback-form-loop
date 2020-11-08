@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 class Homepage extends Component {
   state = {
@@ -29,7 +30,9 @@ class Homepage extends Component {
           <h1>Answer some questions about your day!</h1>
         </div>
         <form onSubmit={this.onStart}>
-          <button>Start</button>
+          <Button variant="contained" color="primary" type="submit">
+            Start
+          </Button>
         </form>
       </div>
     );

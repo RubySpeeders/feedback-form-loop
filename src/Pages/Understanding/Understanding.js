@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 class Understanding extends Component {
   state = {
@@ -78,10 +79,16 @@ class Understanding extends Component {
           ></input>
           <label htmlFor="five">5</label>
           <div>
-            <button type="button" onClick={this.onBackClick}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={this.onBackClick}
+            >
               Back
-            </button>
-            <button>Next</button>
+            </Button>
+            <Button variant="contained" color="primary" type="submit">
+              Next
+            </Button>
           </div>
         </form>
       </div>
