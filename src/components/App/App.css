@@ -23,9 +23,11 @@
 
 .simpleTable {
   border-collapse: collapse;
+  margin: 0 auto;
 }
 
-.simpleTable td {
+.simpleTable td,
+th {
   padding: 6px 10px;
   border: 1px solid #333333;
 }

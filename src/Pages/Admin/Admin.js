@@ -30,9 +30,21 @@ class Admin extends Component {
       <div>
         <h1>Feedback Results</h1>
         <div>
-          {this.props.store.getDataReducer.map((item, index) => (
-            <AdminItem key={index} item={item} />
-          ))}
+          <table className="simpleTable">
+            <thead>
+              <tr>
+                <th>Feeling</th>
+                <th>Understanding</th>
+                <th>Support</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.props.store.getDataReducer.map((item, index) => (
+                <AdminItem key={index} item={item} />
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     );
