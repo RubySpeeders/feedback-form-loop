@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import swal from 'sweetalert';
 
+import Button from '@material-ui/core/Button';
+
 import AdminItem from '../AdminItem/AdminItem';
 
 class Admin extends Component {
@@ -25,6 +27,10 @@ class Admin extends Component {
       });
   };
 
+  backToStart = (event) => {
+    this.props.history.push('/');
+  };
+
   render() {
     return (
       <div>
@@ -45,6 +51,15 @@ class Admin extends Component {
               ))}
             </tbody>
           </table>
+        </div>
+        <div>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={this.backToStart}
+          >
+            Back to Start
+          </Button>
         </div>
       </div>
     );

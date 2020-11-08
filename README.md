@@ -4,7 +4,7 @@ Feedback Form
 
 ## Description
 
-I built a feedback form on a single page application using a hash router. There are four pages of questions - feeling, understanding, support, and comments. Before submitting, users can review the information they put in and go back and change their answers. The first three pages require an input, but the comments are optional. After submitting, the answers are saved in a database.
+I built a feedback form on a single page application using a hash router. There are four pages of questions - feeling, understanding, support, and comments. Before submitting, users can review the information they put in and go back and change their answers. The first three pages require an input, but the comments are optional. After submitting, the answers are saved in a database. An admin page shows all the responses from the database.
 
 ## Prerequisites
 
@@ -37,6 +37,7 @@ Material-UI
 5. Fourth page asks the user for any additional comments. Click next to go to review page. This step is optional.
 6. The last page lists the information the user inputted. If desired, user can go back and edit their information by clicking the back button.
 7. After clicking the submit button, user is taken to a successful page and can click the Back to Start button to start the survey again.
+8. Admin can click on the Admin link and see a table with all the responses.
 
 ## Built With
 
