@@ -31,7 +31,7 @@ class Understanding extends Component {
             checked={this.state.understanding === '1'}
             onChange={this.onRadioChange}
           ></input>
-          <label for="one">1</label>
+          <label htmlFor="one">1</label>
 
           <input
             type="radio"
@@ -41,7 +41,7 @@ class Understanding extends Component {
             checked={this.state.understanding === '2'}
             onChange={this.onRadioChange}
           ></input>
-          <label for="two">2</label>
+          <label htmlFor="two">2</label>
 
           <input
             type="radio"
@@ -51,7 +51,7 @@ class Understanding extends Component {
             checked={this.state.understanding === '3'}
             onChange={this.onRadioChange}
           ></input>
-          <label for="three">3</label>
+          <label htmlFor="three">3</label>
 
           <input
             type="radio"
@@ -61,7 +61,7 @@ class Understanding extends Component {
             checked={this.state.understanding === '4'}
             onChange={this.onRadioChange}
           ></input>
-          <label for="four">4</label>
+          <label htmlFor="four">4</label>
 
           <input
             type="radio"
@@ -71,7 +71,7 @@ class Understanding extends Component {
             checked={this.state.understanding === '5'}
             onChange={this.onRadioChange}
           ></input>
-          <label for="five">5</label>
+          <label htmlFor="five">5</label>
           <div>
             <button>Next</button>
           </div>

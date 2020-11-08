@@ -18,6 +18,10 @@ class Comments extends Component {
     });
   };
 
+  onBackClick = (event) => {
+    this.props.history.push('/support');
+  };
+
   render() {
     return (
       <div>
@@ -28,6 +32,7 @@ class Comments extends Component {
             onChange={this.handleChange}
           ></input>
           <div>
+            <button onClick={this.onBackClick}>Back</button>
             <button>Next</button>
           </div>
         </form>

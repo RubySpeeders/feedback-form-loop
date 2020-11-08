@@ -21,7 +21,6 @@ class Review extends Component {
   }
 
   onBackClick = (event) => {
-    console.log('back clicked');
     this.props.history.push('/comments');
   };
 
