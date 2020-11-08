@@ -40,7 +40,7 @@ class Comments extends Component {
           /> */}
           <input
             type="text"
-            placeholder="Write your comments here"
+            placeholder="Comments"
             onChange={this.handleChange}
           ></input>
           <div>
