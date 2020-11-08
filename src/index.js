@@ -28,6 +28,9 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
   if (action.type === 'START_PAGE') {
     return action.payload;
   }
+  if (action.type === 'GET_DATA') {
+    return action.payload;
+  }
   return state;
 };
 

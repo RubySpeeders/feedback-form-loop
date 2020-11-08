@@ -7,12 +7,14 @@ class Feeling extends Component {
     feeling: '',
   };
 
+  //chooses number of radio selection
   onRadioChange = (event) => {
     this.setState({
       feeling: event.target.value,
     });
   };
 
+  //dispatches the feeling radio selection to reducer, goes to next page
   onNextClick = (event) => {
     event.preventDefault();
     this.props.dispatch({ type: 'UPDATE_FEELING', payload: this.state });

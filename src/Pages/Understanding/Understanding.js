@@ -7,18 +7,21 @@ class Understanding extends Component {
     understanding: '',
   };
 
+  //chooses number of radio selection
   onRadioChange = (event) => {
     this.setState({
       understanding: event.target.value,
     });
   };
 
+  //dispatches understanding rating to reducer, goes to next page
   onNextClick = (event) => {
     event.preventDefault();
     this.props.dispatch({ type: 'UPDATE_UNDERSTANDING', payload: this.state });
     this.props.history.push('/support');
   };
 
+  //goes back a page
   onBackClick = (event) => {
     this.props.history.push('/feeling');
   };

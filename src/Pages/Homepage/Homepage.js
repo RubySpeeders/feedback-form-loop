@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 
 class Homepage extends Component {
+  //empty values of state for page load
   state = {
     feeling: '',
     understanding: '',
@@ -10,15 +11,17 @@ class Homepage extends Component {
     comments: '',
   };
 
+  //resets the page on page load
   componentDidMount() {
     this.resetPage();
   }
 
+  //moves to the first question page
   onStart = (event) => {
     event.preventDefault();
     this.props.history.push('/feeling');
   };
-
+  //function resets the page
   resetPage() {
     this.props.dispatch({ type: 'START_PAGE', payload: this.state });
   }

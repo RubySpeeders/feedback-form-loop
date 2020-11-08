@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
+import TextareaAutosize from '@material-ui/core/Button';
+import spacing from '@material-ui/core/Button';
 
 class Comments extends Component {
   state = {
     comments: '',
   };
 
+  //dispatches comments to reducer, goes to review page
   onNextClick = (event) => {
     event.preventDefault();
     this.props.dispatch({ type: 'UPDATE_COMMENTS', payload: this.state });
     this.props.history.push('/review');
   };
 
+  //targets the value of comments
   handleChange = (event) => {
     this.setState({
       comments: event.target.value,
     });
   };
 
+  //goes back a page
   onBackClick = (event) => {
     this.props.history.push('/support');
   };
@@ -29,6 +34,10 @@ class Comments extends Component {
         <p>Any comments you want to leave?</p>
         <p>(optional)</p>
         <form onSubmit={this.onNextClick}>
+          {/* <TextareaAutosize
+            placeholder="Write your comments here"
+            variant="outlined"
+          /> */}
           <input
             type="text"
             placeholder="Write your comments here"
@@ -39,6 +48,7 @@ class Comments extends Component {
               variant="contained"
               color="primary"
               onClick={this.onBackClick}
+              m={30}
             >
               Back
             </Button>

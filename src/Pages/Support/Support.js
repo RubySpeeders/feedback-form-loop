@@ -7,18 +7,21 @@ class Support extends Component {
     support: '',
   };
 
+  //chooses number of radio selection
   onRadioChange = (event) => {
     this.setState({
       support: event.target.value,
     });
   };
 
+  //dispatches support rating to reducer, goes to next page
   onNextClick = (event) => {
     event.preventDefault();
     this.props.dispatch({ type: 'UPDATE_SUPPORT', payload: this.state });
     this.props.history.push('/comments');
   };
 
+  //goes back a page
   onBackClick = (event) => {
     this.props.history.push('/understanding');
   };
