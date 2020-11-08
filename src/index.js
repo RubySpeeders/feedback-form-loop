@@ -28,6 +28,10 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
   if (action.type === 'START_PAGE') {
     return action.payload;
   }
+  return state;
+};
+
+const getDataReducer = (state = [], action) => {
   if (action.type === 'GET_DATA') {
     return action.payload;
   }
@@ -37,6 +41,7 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
 const storeInstance = createStore(
   combineReducers({
     feedbackReducer,
+    getDataReducer,
   }),
   applyMiddleware(logger)
 );

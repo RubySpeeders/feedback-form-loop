@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import swal from 'sweetalert';
 
+import AdminItem from '../AdminItem/AdminItem';
+
 class Admin extends Component {
   componentDidMount() {
     this.getData();
@@ -24,32 +26,14 @@ class Admin extends Component {
   };
 
   render() {
-    // const listElements = this.props.store.feedbackReducer.map((item, index) => {
-    //   return <li key={index}>{item}</li>;
-    // });
     return (
       <div>
         <h1>Feedback Results</h1>
-        <div>{JSON.stringify(this.props.store.feedbackReducer)}</div>
-        <table>
-          <thead>
-            <tr>
-              <th>Feeling</th>
-              <th>Understanding</th>
-              <th>Support</th>
-              <th>Comments</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-        {/* <p>{listElements}</p> */}
+        <div>
+          {this.props.store.getDataReducer.map((item, index) => (
+            <AdminItem key={index} item={item} />
+          ))}
+        </div>
       </div>
     );
   }
