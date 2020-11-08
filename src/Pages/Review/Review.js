@@ -17,7 +17,7 @@ class Review extends Component {
       })
       .catch((err) => {
         console.log(err);
-        alert('Your feedback did not go through.');
+        swal('Something went wrong!');
       });
   }
 
