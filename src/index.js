@@ -16,13 +16,7 @@ const feedbackReducerInitialState = {
 };
 
 const feedbackReducer = (state = feedbackReducerInitialState, action) => {
-  if (action.type === 'UPDATE_FEELING') {
-    return { ...state, ...action.payload };
-  } else if (action.type === 'UPDATE_UNDERSTANDING') {
-    return { ...state, ...action.payload };
-  } else if (action.type === 'UPDATE_SUPPORT') {
-    return { ...state, ...action.payload };
-  } else if (action.type === 'UPDATE_COMMENTS') {
+  if (action.type === 'UPDATE_FEEDBACK') {
     return { ...state, ...action.payload };
   }
   if (action.type === 'START_PAGE') {

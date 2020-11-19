@@ -17,7 +17,7 @@ class Understanding extends Component {
   //dispatches understanding rating to reducer, goes to next page
   onNextClick = (event) => {
     event.preventDefault();
-    this.props.dispatch({ type: 'UPDATE_UNDERSTANDING', payload: this.state });
+    this.props.dispatch({ type: 'UPDATE_FEEDBACK', payload: this.state });
     this.props.history.push('/support');
   };
 
