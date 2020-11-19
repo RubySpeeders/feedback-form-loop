@@ -20,7 +20,7 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
     return { ...state, ...action.payload };
   }
   if (action.type === 'START_PAGE') {
-    return action.payload;
+    return feedbackReducerInitialState;
   }
   return state;
 };

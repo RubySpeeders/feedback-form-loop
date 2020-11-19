@@ -5,14 +5,6 @@ import { HashRouter as Router, Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
 class Homepage extends Component {
-  //empty values of state for page load
-  state = {
-    feeling: '',
-    understanding: '',
-    support: '',
-    comments: '',
-  };
-
   //resets the page on page load
   componentDidMount() {
     this.resetPage();
@@ -23,9 +15,10 @@ class Homepage extends Component {
     event.preventDefault();
     this.props.history.push('/feeling');
   };
+
   //function resets the page
   resetPage() {
-    this.props.dispatch({ type: 'START_PAGE', payload: this.state });
+    this.props.dispatch({ type: 'START_PAGE' });
   }
 
   render() {
