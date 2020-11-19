@@ -12,7 +12,7 @@ class Comments extends Component {
   //dispatches comments to reducer, goes to review page
   onNextClick = (event) => {
     event.preventDefault();
-    this.props.dispatch({ type: 'UPDATE_COMMENTS', payload: this.state });
+    this.props.dispatch({ type: 'UPDATE_FEEDBACK', payload: this.state });
     this.props.history.push('/review');
   };
 
