@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Button from '@material-ui/core/Button';
-import TextareaAutosize from '@material-ui/core/Button';
-import spacing from '@material-ui/core/Button';
+import { Button, TextField } from '@material-ui/core';
 
 class Comments extends Component {
   state = {
@@ -34,15 +32,14 @@ class Comments extends Component {
         <p>Any comments you want to leave?</p>
         <p>(optional)</p>
         <form onSubmit={this.onNextClick}>
-          {/* <TextareaAutosize
-            placeholder="Write your comments here"
+          <TextField
+            id="multiline-comments"
+            multiline
+            rows={4}
+            label="Comments"
             variant="outlined"
-          /> */}
-          <input
-            type="text"
-            placeholder="Comments"
             onChange={this.handleChange}
-          ></input>
+          />
           <div>
             <Button
               variant="contained"
